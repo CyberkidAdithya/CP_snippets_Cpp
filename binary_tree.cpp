@@ -63,6 +63,7 @@ public:
 
     vector<int> postorder(Node* root)
     {
+        nodes.clear();
         traversalUtil(root);
         return nodes;
     }
