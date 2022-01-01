@@ -44,26 +44,26 @@ class Solution
 public:
     vector<int> nodes;  // to store the answer
 
-    auto postorderUtil(Node* root)
+    auto traversalUtil(Node* root)
     {
         if (!root)
             return;
 
         for (auto child : root -> children)
-            postorderUtil(child);
+            traversalUtil(child);
 
         nodes.push_back(root -> val);
 
         // if (root -> left)
-        // postorderUtil(root -> left);
+        // traversalUtil(root -> left);
 
         // if (root -> right)
-        // postorderUtil(root -> right);
+        // traversalUtil(root -> right);
     }
 
     vector<int> postorder(Node* root)
     {
-        postorderUtil(root);
+        traversalUtil(root);
         return nodes;
     }
 };
