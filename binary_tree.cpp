@@ -49,7 +49,7 @@ public:
         if (!root)
             return;
 
-        // if (nodes.size() == depth)
+        // if (nodes.size() == depth)   // depth is used for level order traversal
         //     nodes.push_back(vector<int>());
 
         for (auto child : root -> children)
