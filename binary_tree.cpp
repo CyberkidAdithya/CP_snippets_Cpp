@@ -49,6 +49,9 @@ public:
         if (!root)
             return;
 
+        // if (nodes.size() == depth)
+        //     nodes.push_back(vector<int>());
+
         for (auto child : root -> children)
             traversalUtil(child);
 
